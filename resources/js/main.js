@@ -1,7 +1,7 @@
 /* eslint-disable no-restricted-syntax */
 import axios from "axios";
 
-const url = new URL(document.location.href);
+// const url = new URL(document.location.href);
 const container = document.querySelector(".container");
 console.log(container);
 const apiRoot = "https://character-database.becode.xyz";
@@ -46,18 +46,18 @@ async function getChars() {
       h2.appendChild(title);
       console.log(h2);
 
-      const btn_more = document.createElement("a");
-      btn_more.setAttribute("class", "btnMore");
+      const btnMore = document.createElement("a");
+      btnMore.setAttribute("class", "btnMore");
       // TODO create url with id as parameter
-      btn_more.setAttribute("href", "singlechar.html");
-      const btn_moreText = document.createTextNode("See Character");
-      btn_more.appendChild(btn_moreText);
+      btnMore.setAttribute("href", "singlechar.html");
+      const btnMoreText = document.createTextNode("See Character");
+      btnMore.appendChild(btnMoreText);
 
       card.appendChild(image);
       card.appendChild(h2);
       card.appendChild(h3);
       card.appendChild(p);
-      card.appendChild(btn_more);
+      card.appendChild(btnMore);
 
       container.appendChild(card);
     }
