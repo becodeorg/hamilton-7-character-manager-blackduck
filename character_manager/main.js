@@ -1,5 +1,6 @@
 import axios from "axios";
-const body = document.querySelector("body");
+const container = document.querySelector(".container");
+console.log(container);
 const apiRoot = "https://character-database.becode.xyz";
 
 function error(message) {
@@ -52,7 +53,7 @@ async function getChars() {
       card.appendChild(p);
       card.appendChild(btn_more);
 
-      body.appendChild(card);
+      container.appendChild(card);
     }
   } catch (err) {
     console.log("catch ....");
