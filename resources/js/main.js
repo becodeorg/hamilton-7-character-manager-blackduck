@@ -1,4 +1,6 @@
 import axios from "axios";
+
+const url= new URL(document.location.href);
 const container = document.querySelector(".container");
 console.log(container);
 const apiRoot = "https://character-database.becode.xyz";
