@@ -1,23 +1,68 @@
-import "./style.css";
-import javascriptLogo from "./javascript.svg";
-import { setupCounter } from "./counter.js";
+import axios from "axios";
+const body = document.querySelector("body");
+const apiRoot = "https://character-database.becode.xyz";
 
-// document.querySelector('#app').innerHTML = `
-//   <div>
-//     <a href="https://vitejs.dev" target="_blank">
-//       <img src="/vite.svg" class="logo" alt="Vite logo" />
-//     </a>
-//     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-//       <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-//     </a>
-//     <h1>Hello Vite!</h1>
-//     <div class="card">
-//       <button id="counter" type="button"></button>
-//     </div>
-//     <p class="read-the-docs">
-//       Click on the Vite logo to learn more
-//     </p>
-//   </div>
-// `
+function error(message) {
+  console.error(`Error: ${message} `);
+}
 
-// setupCounter(document.querySelector('#counter'))
+async function getChars() {
+  console.log("now async ....");
+  let response;
+  try {
+    console.log("trying ....");
+    response = await axios.get(apiRoot + "/characters");
+    for (let el of response.data) {
+      console.log(el);
+      let card = document.createElement("div");
+      console.log(card);
+      card.setAttribute("class", "card");
+      let title = document.createTextNode(el.name);
+      console.log(title);
+      let picture = "data:image/gif;base64," + el.image;
+      let desc = document.createTextNode(el.description);
+      let p = document.createElement("p");
+      p.setAttribute("class", "description");
+      p.appendChild(desc);
+
+      let short = document.createTextNode(el.shortDescription);
+      let h3 = document.createElement("h3");
+      h3.setAttribute("class", "shortDescription");
+      h3.appendChild(short);
+
+      let image = document.createElement("img");
+      image.setAttribute("src", picture);
+      image.setAttribute("class", "profilePicture");
+
+      let h2 = document.createElement("h2");
+      h2.setAttribute("class", "name");
+      h2.appendChild(title);
+      console.log(h2);
+
+      let btn_more = document.createElement("a");
+      btn_more.setAttribute("class", "btnMore");
+      // TODO create url with id as parameter
+      btn_more.setAttribute("href", "singleCharacter.html");
+      let btn_moreText = document.createTextNode("See Character");
+      btn_more.appendChild(btn_moreText);
+
+      card.appendChild(image);
+      card.appendChild(h2);
+      card.appendChild(h3);
+      card.appendChild(p);
+      card.appendChild(btn_more);
+
+      body.appendChild(card);
+    }
+  } catch (err) {
+    console.log("catch ....");
+    error(err);
+  }
+}
+
+console.log("getting chars...");
+
+getChars();
+
+//convert to object character
+console.log("END");
