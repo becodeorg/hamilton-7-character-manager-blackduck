@@ -7,5 +7,15 @@
 
   "rules": {
     "prettier/prettier": "error"
-  }
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion" : "latest"
+},
+"ignorePatterns": [
+  "node_modules",
+  "build",
+  "dist",
+  "public"
+]
 }
