@@ -1,7 +1,5 @@
 {
-  "extends": [
-    "plugin:prettier/recommended"
-  ],
+  "extends":  ["airbnb", "prettier"],
 
   "plugins": ["prettier"],
 
@@ -17,5 +15,9 @@
   "build",
   "dist",
   "public"
-]
+],
+"env": {
+  "browser": true,
+  "node": true
+}
 }

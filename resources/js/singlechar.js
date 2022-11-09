@@ -1,16 +1,18 @@
+/* eslint-disable no-console */
 import axios from "axios";
 
 const url = new URL(document.location.href);
 console.log(url);
-let pageTitle = document.querySelector("title");
-let profilePicture = document.querySelector(".profilePicture");
-let charName = document.querySelector(".name");
-let short = document.querySelector(".shortDescription");
-let description = document.querySelector(".description");
-let updateBtn = document.querySelector(".updateBtn");
-let deleteBtn = document.querySelector(".deleteBtn");
+const pageTitle = document.querySelector("title");
+const profilePicture = document.querySelector(".profilePicture");
+const charName = document.querySelector(".name");
+const short = document.querySelector(".shortDescription");
+const description = document.querySelector(".description");
+const updateBtn = document.querySelector(".updateBtn");
+const deleteBtn = document.querySelector(".deleteBtn");
 
 // Grab components
 if (!url.searchParams) {
+  console.log(url.origin);
   window.location = url.origin;
 }
