@@ -53,10 +53,3 @@ function card() {
 }
 */
 
-
-
-
-
-
-import axios from "axios";
-
