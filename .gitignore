@@ -7,14 +7,11 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules/
+**/node_modules
 dist
 dist-ssr
 *.local
-# given that with prettier theres 2 of these now
-character_manager/node_modules/
-package.json
-package-lock.json
+
 
 
 # Editor directories and files
