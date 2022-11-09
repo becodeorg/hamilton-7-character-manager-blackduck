@@ -1,30 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Character Manager</title>
-  </head>
-  <body>
-    <!--
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <!--CSS-->
+  <link rel="stylesheet" href="style.css">
+  <!--Font Family Permanent Marker-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="resources/css/style.css">
+  <title>Character Manager</title>
+</head>
+
+<body class="bg-gradient-to-r from-violet-400 via-pink-400 to-red-400 flex-col items-start">
+  <!--
     <div id="app"></div>
     -->
-    <h1>Character Manager</h1>
-    <div class="seperation__bar"></div>
+  <header class="w-full">
+    <div class="items-center justify-around">
+      <h1 class="font-permanent">
+        <a href="index.html">
+          Character Manager
+        </a>
+      </h1>
+      <div class="seperation__bar h-1 bg-white m-auto"></div>
+  </header>
+  <div>
     <div>
-        <div>
-            <div class="profilePicture"></div>
-            <h2 class="name"></h2>
-            <p class="shortDescription"></p>
-            <p class="description"></p>
-        </div>
-        <div>
-            <button class="updateBtn">Udapte character</button>
-            <button class="deleteBtn">Delete character</button>
-        </div>
+      <div class="profilePicture"></div>
+      <h2 class="name"></h2>
+      <p class="shortDescription"></p>
+      <p class="description"></p>
     </div>
-    <script type="module" src="/main.js"></script>
-  </body>
+    <div>
+      <button class="updateBtn">Udapte character</button>
+      <button class="deleteBtn">Delete character</button>
+    </div>
+  </div>
+  <script type="module" src="main.js"></script>
+  <script type="module" src="lisa.js"></script>
+</body>
+
 </html>
