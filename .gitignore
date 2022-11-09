@@ -11,6 +11,11 @@ node_modules
 dist
 dist-ssr
 *.local
+# given that with prettier theres 2 of these now
+character_manager/node_modules
+package.json
+package-lock.json
+
 
 # Editor directories and files
 .vscode/*
