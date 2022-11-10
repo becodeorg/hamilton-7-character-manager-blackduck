@@ -1,18 +1,11 @@
 /* eslint-disable no-restricted-syntax */
 import axios from 'axios';
+import { makeImageSource, error } from './helpers';
 
 // const url = new URL(document.location.href);
 const container = document.querySelector('.container');
 console.log(container);
 const apiRoot = 'https://character-database.becode.xyz';
-
-function error(message) {
-    console.error(`Error: ${message} `);
-}
-
-function makeImageSource(base64) {
-    return `data:image/gif;base64,${base64}`;
-}
 
 async function getChars() {
     console.log('now async ....');
