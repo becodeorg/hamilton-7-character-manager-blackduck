@@ -53,7 +53,7 @@ async function getChars() {
       card.appendChild(p);
       card.appendChild(btn_more);
 
-      body.appendChild(card);
+      container.appendChild(card);
     }
   } catch (err) {
     console.log("catch ....");
