@@ -4,33 +4,50 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <!--CSS-->
-  <link rel="stylesheet" href="resources/css/style.css">
-  <!--Font Family Permanent Marker-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Character Manager</title>
 </head>
 
-<body class="bg-gradient-to-r from-violet-400 via-pink-400 to-red-400 flex-col items-start">
+<body>
   <!--
+    <div id="app"></div>
+    -->
+  <h1>Character Manager</h1>
+  <div class="seperation__bar"></div>
+
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!--CSS-->
+    <link rel="stylesheet" href="resources/css/style.css">
+    <!--Font Family Permanent Marker-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Character Manager</title>
+  </head>
+
+  <body class="bg-gradient-to-r from-violet-400 via-pink-400 to-red-400 flex-col items-start">
+    <!--
     <div id=" app">
   </div>
   -->
-  <header class="w-full">
-    <div class=" flex items-center justify-around">
-      <h1 class=" font-permanent">Character Manager</h1>
-      <input type="text" placeholder="Search character" name="search" class="p-1 bg-white rounded-md w-52 italic	">
-    </div>
-    <div class="seperation__bar h-1 bg-white m-auto"></div>
-  </header>
-  <section class="container"></section>
+    <header class="w-full">
+      <div class=" flex items-center justify-around">
+        <h1 class=" font-permanent">Character Manager</h1>
+        <input type="text" placeholder="Search character" name="search" class="p-1 bg-white rounded-md w-52 italic	">
+      </div>
+      <div class="seperation__bar h-1 bg-white m-auto"></div>
+    </header>
+    <section class="container"></section>
 
     <a href="addchar.html" title="Button to add a character">Add a new character to the collection</a>
 
     <script type="module" src="./resources/js/main.js"></script>
   </body>
+
 </html>
