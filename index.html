@@ -6,11 +6,10 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <!--CSS-->
   <link rel="stylesheet" href="resources/css/style.css">
-  <!--Font Family Permanent Marker-->
+  <!--Font Family Black Ops One-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Character Manager</title>
 </head>
@@ -20,30 +19,31 @@
     <div id=" app">
   </div>
   -->
-    <header class="w-full p-10">
-      <div class=" flex items-center justify-between flex-wrap pb-4 text-center">
-        <h1 class="font-permanent">Character Manager</h1>
-        <input type="text" placeholder="Search character" name="search" class="p-1 bg-white rounded-md w-52 italic self-center">
+    <header class="w-full pb-10">
+      <div class=" flex items-center justify-center flex-wrap pb-4 text-center md:justify-between">
+        <h1 class="font-blackOps pb-4">Character Manager</h1>
+        <input type="text" placeholder="Search character" name="search" class="p-1 bg-white rounded-md w-52 italic">
       </div>
       <div class="seperation__bar h-px bg-white m-auto"></div>
     </header>
-    <section class="container ">
-      <div class="container__card flex flex-col justify-around bg-black w-44 h-64 rounded-xl p-2">
-        <img class="rounded-full w-2/4 self-center" src="data:image/gif;base64,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" class="profilePicture">
-        <h2 class="name font-permanent text-sm left">Chuck Norris</h2>
-        <p class="shortDescription text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    <section class="container">
+      <div class="card flex flex-col justify-around bg-black/30 w-44 h-64 rounded-xl p-2">
+        <img class="rounded-full grayscale w-2/4 self-center" src="data:image/gif;base64,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" class="profilePicture">
+        <h2 class="name text-center font-blackOps text-sm left">Chuck Norris</h2>
+        <p class="shortDescription text-justify text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         </p>
         <p class="description hidden">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam reiciendis voluptates velit officia at rem possimus aspernatur blanditiis repudiandae reprehenderit ipsa est a asperiores ad temporibus saepe explicabo, similique dolorem.
         </p>
-        <a href="singlechar.html" class="btnMore w-max  text-white text-xs p-1 border border-solid border-white rounded-lg italic">See character</a>
+        <a href="singlechar.html" class="btnMore w-max  text-white self-end text-xs p-1 border border-solid border-white rounded-lg italic">See character</a>
 
       </div>
     </section>
 
     <a class="btnAdd" href="addchar.html" title="Button to add a character">+</a>
-
+<!--
     <script type="module" src="./resources/js/main.js"></script>
+    -->
     <script type="module" src="./resources/js/design.js"></script>
   </body>
 
