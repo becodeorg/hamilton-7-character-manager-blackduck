@@ -4,16 +4,15 @@ import axios from 'axios';
 
 const body = document.querySelector('body');
 body.className =
-    'p-6 bg-gradient-to-b from-gray-900  to-teal-100 flex-col items-start';
+    'p-6 bg-gradient-to-b from-gray-900 via-gray-400 to-teal-100 flex-col items-center';
 
 const addButton = document.querySelector('.btnAdd');
 addButton.className =
-    'w-12 h-12 bg-slate-500 rounded-full pt-2 text-white text-center text-2xl font-bold m-auto';
+    'm-20 w-20 h-20 bg-slate-500 rounded-full pt-4 text-white text-center text-5xl font-bold m-auto drop-shadow-lg';
 
 // const url = new URL(document.location.href);
 const container = document.querySelector('.container');
-container.className =
-    'flex flex-wrap w-4/5 m-auto justify-center md:justify-between';
+container.className = 'flex flex-wrap m-auto justify-center md:justify-between';
 console.log(container);
 const apiRoot = 'https://character-database.becode.xyz';
 
@@ -38,12 +37,11 @@ async function getChars() {
             console.log(card);
             // adding classes
             card.className =
-                'card flex flex-col justify-between bg-black/30 w-44 h-64 rounded-xl p-2';
+                'card flex flex-col justify-between bg-black/30 w-60 h-80 rounded-xl p-2';
 
             // IMAGE
             const image = document.createElement('img');
             image.setAttribute('src', makeImageSource(el.image));
-            image.setAttribute('class', 'profilePicture');
             image.className =
                 'profilePicture rounded-full grayscale w-2/4 self-center';
 
@@ -75,7 +73,7 @@ async function getChars() {
             const btnMoreText = document.createTextNode('See Character');
             btnMore.appendChild(btnMoreText);
             btnMore.className =
-                'btnMore w-max  text-white self-end text-xs p-1 border border-solid border-white rounded-lg italic';
+                'btnMore cursor-pointer	w-max text-white self-end text-xs p-1 border border-solid border-white rounded-lg italic';
 
             container.appendChild(card);
 
