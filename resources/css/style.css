@@ -599,24 +599,20 @@ video {
   height: 20rem;
 }
 
-.w-4\/5 {
-  width: 80%;
+.h-px {
+  height: 1px;
 }
 
-.w-12 {
-  width: 3rem;
+.h-1 {
+  height: 0.25rem;
 }
 
-.w-full {
-  width: 100%;
+.w-20 {
+  width: 5rem;
 }
 
-.w-52 {
-  width: 13rem;
-}
-
-.w-44 {
-  width: 11rem;
+.w-60 {
+  width: 15rem;
 }
 
 .w-2\/4 {
@@ -628,12 +624,12 @@ video {
   width: max-content;
 }
 
-.w-20 {
-  width: 5rem;
+.w-full {
+  width: 100%;
 }
 
-.w-60 {
-  width: 15rem;
+.w-52 {
+  width: 13rem;
 }
 
 .cursor-pointer {
@@ -746,14 +742,14 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.via-teal-700 {
-  --tw-gradient-to: rgb(15 118 110 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), #0f766e, var(--tw-gradient-to);
-}
-
 .via-gray-400 {
   --tw-gradient-to: rgb(156 163 175 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), #9ca3af, var(--tw-gradient-to);
+}
+
+.via-teal-700 {
+  --tw-gradient-to: rgb(15 118 110 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #0f766e, var(--tw-gradient-to);
 }
 
 .to-teal-100 {
@@ -764,28 +760,20 @@ video {
   --tw-gradient-to: #99f6e4;
 }
 
-.to-teal-400 {
-  --tw-gradient-to: #2dd4bf;
-}
-
-.to-teal-300 {
-  --tw-gradient-to: #5eead4;
-}
-
 .p-6 {
   padding: 1.5rem;
-}
-
-.p-1 {
-  padding: 0.25rem;
 }
 
 .p-2 {
   padding: 0.5rem;
 }
 
-.pt-2 {
-  padding-top: 0.5rem;
+.p-1 {
+  padding: 0.25rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
 }
 
 .pb-10 {
@@ -796,20 +784,8 @@ video {
   padding-bottom: 1rem;
 }
 
-.pt-5 {
-  padding-top: 1.25rem;
-}
-
-.pt-4 {
-  padding-top: 1rem;
-}
-
 .text-center {
   text-align: center;
-}
-
-.text-right {
-  text-align: right;
 }
 
 .text-justify {
@@ -820,9 +796,9 @@ video {
   font-family: 'Black Ops One', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .text-sm {
@@ -833,11 +809,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 
 .font-bold {
@@ -851,14 +822,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.opacity-50 {
-  opacity: 0.5;
-}
-
-.opacity-20 {
-  opacity: 0.2;
 }
 
 .drop-shadow-lg {
@@ -975,10 +938,6 @@ button:focus-visible {
 }
 
 @media (min-width: 768px) {
-  .md\:flex-col {
-    flex-direction: column;
-  }
-
   .md\:justify-between {
     justify-content: space-between;
   }
