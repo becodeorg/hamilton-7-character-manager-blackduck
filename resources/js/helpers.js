@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 export function error(message) {
     console.error(`Error: ${message} `);
 }

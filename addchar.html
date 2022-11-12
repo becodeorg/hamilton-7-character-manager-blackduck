@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <!--Fontawesome-->
+  <script src="https://kit.fontawesome.com/1c776a677b.js" crossorigin="anonymous"></script>
+  
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Character Manager</title>
 </head>
@@ -23,21 +26,26 @@
         </div>
         <div class="seperation__bar"></div>
     </header>
-    <section>
-        <div>
-            <img class="profilePicture" src="" alt="profilePicture">
-            <button classe="uploadImage">
-                Upload image
-            </button>
-        </div>
-        <form action="">
+    <section class="card w-full min-h-fit p-6 bg-black/30 rounded-3xl">
+        <form class='flex flex-col justify-between' action="">
+            <label class='flex flex-col justify-between' for="img">Preview</label>
+            <input type="file" id="img" name="img" accept="image/*">
+            <input type="submit">
+        
             <input type="text" name="characterName" placeholder="Name" class="charname" required>
             <input type="text" name="description" placeholder="Short description" class="short" required>
             <textarea typ="text" name="biographie"  cols="30" rows="10" class=" description" required>
             </textarea>
-            <button class="add"> Add Character</button>
-            <button class="reset"> Reset </button>
-        </form>
+          </form>
+          <!--Bottom Buttons-->
+          <div class="flex items-center justify-center md:flex-row">
+            <a class="updateBtn m-4 w-10 h-10 pt-2 bg-gray-500 rounded-full text-white text-center text-md font-bold drop-shadow-lg">
+                <i class="fa-solid fa-plus"></i>
+            </a>
+            <a href="#" class="reset m-4 w-10 h-10 pt-2 bg-gray-300/50 rounded-full text-rose-900 text-center text-md font-bold drop-shadow-lg">
+              <i class="fa-solid fa-rotate"></i>
+            </a>
+          </div>
     </section>
     <script type="module" src="./resources/js/addchar.js"></script>
     <script type="module" src="./resources/js/design.js"></script>

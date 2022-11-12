@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const body = document.querySelector('body');
 body.className =
-    'p-10 bg-gradient-to-b from-gray-900 via-gray-400 to-teal-100 flex-col items-center';
+    'p-8 bg-gradient-to-b from-gray-900 via-gray-400 to-teal-100 flex-col items-center';
 
 // HEADER
 const header = document.querySelector('header');
@@ -17,10 +17,7 @@ h1.className = 'font-blackOps pb-4';
 const line = document.querySelector('.seperation__bar');
 line.className = 'h-1 bg-white m-auto';
 
-// MULTIPLE CARDS PAGE
 const container = document.querySelector('.container');
-container.className =
-    'grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 ';
 console.log(container);
 
 // const url = new URL(document.location.href);
