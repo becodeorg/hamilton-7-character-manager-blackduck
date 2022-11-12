@@ -4,16 +4,26 @@ import axios from 'axios';
 
 const body = document.querySelector('body');
 body.className =
-    'p-6 bg-gradient-to-b from-gray-900 via-gray-400 to-teal-100 flex-col items-center';
+    'p-10 bg-gradient-to-b from-gray-900 via-gray-400 to-teal-100 flex-col items-center';
 
-const addButton = document.querySelector('.btnAdd');
-addButton.className =
-    'm-20 w-20 h-20 bg-slate-500 rounded-full pt-4 text-white text-center text-5xl font-bold m-auto drop-shadow-lg';
+// HEADER
+const header = document.querySelector('header');
+header.className = 'w-full pb-10';
+const heading = document.querySelector('.headerContainer');
+heading.className =
+    'flex items-center justify-center pb-4 text-center flex-col lg:justify-between lg:flex-row';
+const h1 = document.querySelector('h1');
+h1.className = 'font-blackOps pb-4';
+const line = document.querySelector('.seperation__bar');
+line.className = 'h-1 bg-white m-auto';
+
+// MULTIPLE CARDS PAGE
+const container = document.querySelector('.container');
+container.className =
+    'grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 ';
+console.log(container);
 
 // const url = new URL(document.location.href);
-const container = document.querySelector('.container');
-container.className = 'flex flex-wrap m-auto justify-center md:justify-between';
-console.log(container);
 const apiRoot = 'https://character-database.becode.xyz';
 
 function error(message) {
@@ -23,6 +33,8 @@ function error(message) {
 function makeImageSource(base64) {
     return `data:image/gif;base64,${base64}`;
 }
+
+// cards design
 
 async function getChars() {
     console.log('now async ....');
@@ -37,7 +49,7 @@ async function getChars() {
             console.log(card);
             // adding classes
             card.className =
-                'card flex flex-col justify-between bg-black/30 w-60 h-80 rounded-xl p-2';
+                'card flex flex-col justify-between bg-black/30 w-60 h-80 rounded-xl';
 
             // IMAGE
             const image = document.createElement('img');
@@ -73,7 +85,7 @@ async function getChars() {
             const btnMoreText = document.createTextNode('See Character');
             btnMore.appendChild(btnMoreText);
             btnMore.className =
-                'btnMore cursor-pointer	w-max text-white self-end text-xs p-1 border border-solid border-white rounded-lg italic';
+                'btnMore cursor-pointer	w-max self-end text-xs p-2 bg-slate-500 rounded-lg italic hover:bg-white hover:text-slate-500';
 
             container.appendChild(card);
 
@@ -89,3 +101,12 @@ async function getChars() {
     }
 }
 getChars();
+
+// BUTTONS
+const addButton = document.querySelector('.btnAdd');
+addButton.className =
+    'w-20 h-20 bg-slate-500 hover:bg-white/50 rounded-full mt-8 pt-4 text-white hover:text-slate-500 text-center text-5xl font-bold m-auto drop-shadow-lg';
+
+// SINGLE CARD PAGE
+const singleCard = document.querySelector('.single__card');
+singleCard.className = 'p-6 bg-black/30 rounded-3xl';

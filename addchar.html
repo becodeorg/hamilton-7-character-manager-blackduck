@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!--CSS-->
+    <link rel="stylesheet" href="resources/css/style.css">
+    <!--Font Family Black Ops One-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Character Manager</title>
 </head>
 <body>
-        <main>
-            <h1>Character Manager</h1>
-
+    <header>
+        <div class="headerContainer">
+          <h1>
+            <a href="index.html">
+            Character Manager
+            </a>
+          </h1>
+        </div>
+        <div class="seperation__bar"></div>
+    </header>
+    <section>
+        <div>
             <img class="profilePicture" src="" alt="profilePicture">
             <button classe="uploadImage">
                 Upload image
             </button>
-            <form action="">
-                <input type="text" name="characterName" placeholder="Name" class="charname" required>
-                <input type="text" name="description" placeholder="Short description" class="short" required>
-                <textarea typ="text" name="biographie"  cols="30" rows="10" class=" description" required>
-                </textarea>
-                <button class="add"> Add Character</button>
-                <button class="reset"> Reset </button>
-            </form>
-        </main>
-        <script type="module" src="./resources/js/addchar.js"></script>
+        </div>
+        <form action="">
+            <input type="text" name="characterName" placeholder="Name" class="charname" required>
+            <input type="text" name="description" placeholder="Short description" class="short" required>
+            <textarea typ="text" name="biographie"  cols="30" rows="10" class=" description" required>
+            </textarea>
+            <button class="add"> Add Character</button>
+            <button class="reset"> Reset </button>
+        </form>
+    </section>
+    <script type="module" src="./resources/js/addchar.js"></script>
+    <script type="module" src="./resources/js/design.js"></script>
 </body>
 </html>
