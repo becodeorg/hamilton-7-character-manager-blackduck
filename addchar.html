@@ -11,17 +11,17 @@
         <main>
             <h1>Character Manager</h1>
 
-            <img class="profilePicture" src="" alt="profilePicture">
-            <button classe="uploadImage">
-                Upload image
-            </button>
-            <form action="">
+            
+            
+            <form action="" class="charForm">
+                <img class="profilePicture" src="" alt="profilePicture">
+                <input type="file" class="uploadImage">
                 <input type="text" name="characterName" placeholder="Name" class="charname" required>
                 <input type="text" name="description" placeholder="Short description" class="short" required>
                 <textarea typ="text" name="biographie"  cols="30" rows="10" class=" description" required>
                 </textarea>
-                <button class="add"> Add Character</button>
-                <button class="reset"> Reset </button>
+                <input type="submit" class="add">
+                <input type="reset" class="reset">
             </form>
         </main>
         <script type="module" src="./resources/js/addchar.js"></script>
