@@ -18,7 +18,7 @@ async function getChars() {
             const card = document.createElement('div');
             console.log(card);
             card.className =
-                'card flex flex-col justify-between bg-black/30 w-60 h-80 rounded-xl';
+                'card flex flex-col justify-between bg-black/30 w-60 h-80 rounded-xl text-white';
             const title = document.createTextNode(el.name);
             console.log(title);
             const desc = document.createTextNode(el.description);
@@ -28,7 +28,8 @@ async function getChars() {
 
             const short = document.createTextNode(el.shortDescription);
             const shortDsec = document.createElement('p');
-            shortDsec.className = 'shortDescription text-justify text-xs';
+            shortDsec.className =
+                'shortDescription text-justify text-xs text-white';
             shortDsec.appendChild(short);
 
             const image = document.createElement('img');
@@ -39,11 +40,11 @@ async function getChars() {
             const h2 = document.createElement('h2');
             h2.appendChild(title);
             console.log(h2);
-            h2.className = 'name text-center font-blackOps text-sm left';
+            h2.className = 'name text-center font-blackOps text-sm left text-white';
 
             const btnMore = document.createElement('a');
             btnMore.className =
-                'btnMore cursor-pointer	w-max self-end text-xs p-2 bg-slate-500 rounded-lg italic hover:bg-white hover:text-slate-500';
+                'btnMore cursor-pointer	w-max self-end text-xs text-white p-2 bg-slate-500 rounded-lg italic hover:bg-white hover:text-slate-500';
             btnMore.setAttribute('href', `singlechar.html?id=${el.id}`);
             const btnMoreText = document.createTextNode('See Character');
             btnMore.appendChild(btnMoreText);
