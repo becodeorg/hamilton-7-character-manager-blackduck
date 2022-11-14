@@ -26,15 +26,18 @@
         </div>
         <div class="seperation__bar"></div>
     </header>
-    <section class="card w-full min-h-fit p-6 bg-black/30 rounded-3xl">
-        <form class='flex flex-col justify-between' action="">
-            <label class='flex flex-col justify-between' for="img">Preview</label>
+    <section class="card w-full min-h-fit lg:w-4/5 p-6 bg-black/30 rounded-3xl">
+        <form class='flex flex-col justify-between' action="" >
+          
+            <label class='self-center w-28 h-28 border border-solid border-gray-400 rounded-full text-center text-gray-400 font-semibold italic pt-11 mb-5' for="img">Preview</label>
+          <div class='flex flex-col justify-center md:flex-row'>
             <input type="file" id="img" name="img" accept="image/*">
-            <input type="submit">
-        
-            <input type="text" name="characterName" placeholder="Name" class="charname" required>
-            <input type="text" name="description" placeholder="Short description" class="short" required>
-            <textarea typ="text" name="biographie"  cols="30" rows="10" class=" description" required>
+            <input class='text-center text-gray-400 font-semibold italic shadow-sm w-28 self-center bg-gray-600 drop-shadow-lg md:ml-3' type="submit" value="Upload">
+          </div>
+
+            <input type="text" name="characterName" placeholder="Name" class="charname" maxlength="20" required>
+            <input type="text" name="description" placeholder="Short description" class="short" maxlength="70" required>
+            <textarea typ="text" name="biographie"  cols="30" rows="10" class=" description" maxlength="350" required>
             </textarea>
           </form>
           <!--Bottom Buttons-->
