@@ -744,7 +744,7 @@ video {
 }
 
 .font-blackOps {
-  font-family: 'Black Ops One', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: Black Ops One;
 }
 
 .text-sm {
@@ -768,6 +768,11 @@ video {
 
 .italic {
   font-style: italic;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .text-gray-400 {
@@ -968,16 +973,16 @@ input, textarea{
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: #ffffff;
+    background-color: #242424;
   }
 
   a:hover {
-    color: #747bff;
+    color: rgba(188, 202, 201, 0.521);
   }
 
   button {
-    background-color: #f9f9f9;
+    background-color: #242424;
   }
 }
 
