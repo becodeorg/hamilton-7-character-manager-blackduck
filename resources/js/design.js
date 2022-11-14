@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 /* eslint-disable no-restricted-syntax */
-import axios from 'axios';
+// import axios from 'axios';
 
 const body = document.querySelector('body');
 body.className =

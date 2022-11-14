@@ -31,7 +31,7 @@ async function getSingleChar(characterId) {
 
         const image = document.createElement('img');
         image.setAttribute('src', makeImageSource(response.data.image));
-        image.className = 'rounded-full w-2/4 self-center';
+        image.className = 'rounded-full self-center';
 
         updateBtn.setAttribute('href', `addchar.html?id=${characterId}`);
 

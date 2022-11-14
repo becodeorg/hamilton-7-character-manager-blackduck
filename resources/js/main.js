@@ -37,9 +37,9 @@ async function getChars() {
                 'profilePicture rounded-full grayscale w-2/4 self-center';
 
             const h2 = document.createElement('h2');
-            h2.setAttribute('class', 'name');
             h2.appendChild(title);
             console.log(h2);
+            h2.className = 'name text-center font-blackOps text-sm left';
 
             const btnMore = document.createElement('a');
             btnMore.className =
