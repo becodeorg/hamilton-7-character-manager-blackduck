@@ -28,18 +28,15 @@
     </header>
     <section class="card w-full min-h-fit lg:w-4/5 p-6 bg-black/30 rounded-3xl">
         <form class='flex flex-col justify-between' action="" >
-          
             <label class='self-center w-28 h-28 border border-solid border-gray-400 rounded-full text-center text-gray-400 font-semibold italic pt-11 mb-5' for="img">Preview</label>
-          <div class='flex flex-col justify-center md:flex-row'>
-            <input type="file" id="img" name="img" accept="image/*">
-            <input class='text-center text-gray-400 font-semibold italic shadow-sm w-28 self-center bg-gray-600 drop-shadow-lg md:ml-3' type="submit" value="Upload">
-          </div>
-
-            <input type="text" name="characterName" placeholder="Name" class="charname" maxlength="20" required>
-            <input type="text" name="description" placeholder="Short description" class="short" maxlength="70" required>
-            <textarea typ="text" name="biographie"  cols="30" rows="10" class=" description" maxlength="350" required>
-            </textarea>
-          </form>
+            <div class='flex flex-col justify-center md:flex-row'>
+              <input type="file" id="img" name="img" accept="image/*">
+              <input class='text-center text-gray-400 font-semibold italic shadow-sm w-28 self-center bg-gray-600 drop-shadow-lg md:ml-3' type="submit" value="Upload">
+            </div>
+            <input type="text" name="characterName" placeholder="Name" class="charname placeholder:text-gray-600" maxlength="20" required>
+            <input type="text" name="description" placeholder="Short description" class="short placeholder:text-gray-600" maxlength="70" required>  
+            <textarea rows="10"  placeholder="Insert description ..." class="description placeholder:text-gray-600" maxlength="350" required></textarea>
+        </form>
           <!--Bottom Buttons-->
           <div class="flex items-center justify-center md:flex-row">
             <a class="updateBtn m-4 w-10 h-10 pt-2 bg-gray-500 rounded-full text-white text-center text-md font-bold drop-shadow-lg">
