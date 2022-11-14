@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
     <!--Fontawesome-->
-  <script src="https://kit.fontawesome.com/1c776a677b.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/1c776a677b.js" crossorigin="anonymous"></script>
   
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Character Manager</title>
@@ -26,26 +26,26 @@
         </div>
         <div class="seperation__bar"></div>
     </header>
-    <section class="card w-full min-h-fit lg:w-4/5 p-6 bg-black/30 rounded-3xl">
-        <form class='flex flex-col justify-between' action="" >
+    <section class="singleCard">
+        <form class='flex flex-col justify-between' action="post" >
             <label class='self-center w-28 h-28 border border-solid border-gray-400 rounded-full text-center text-gray-400 font-semibold italic pt-11 mb-5' for="img">Preview</label>
             <div class='flex flex-col justify-center md:flex-row'>
               <input type="file" id="img" name="img" accept="image/*">
               <input class='text-center text-gray-400 font-semibold italic shadow-sm w-28 self-center bg-gray-600 drop-shadow-lg md:ml-3' type="submit" value="Upload">
             </div>
-            <input type="text" name="characterName" placeholder="Name" class="charname placeholder:text-gray-600" maxlength="20" required>
-            <input type="text" name="description" placeholder="Short description" class="short placeholder:text-gray-600" maxlength="70" required>  
-            <textarea rows="10"  placeholder="Insert description ..." class="description placeholder:text-gray-600" maxlength="350" required></textarea>
+            <input type="text" name="characterName" placeholder="Name" class="charname font-blackOps placeholder:text-gray-600 placeholder:font-normal" maxlength="20" required>
+            <input type="text" name="description" placeholder="Short description" class="short placeholder:text-gray-500" maxlength="70" required>  
+            <textarea rows="10"  placeholder="Insert description ..." class="description placeholder:text-gray-500" maxlength="350" required></textarea>
         </form>
-          <!--Bottom Buttons-->
-          <div class="flex items-center justify-center md:flex-row">
-            <a class="updateBtn m-4 w-10 h-10 pt-2 bg-gray-500 rounded-full text-white text-center text-md font-bold drop-shadow-lg">
-                <i class="fa-solid fa-plus"></i>
-            </a>
-            <a href="#" class="reset m-4 w-10 h-10 pt-2 bg-gray-300/50 rounded-full text-rose-900 text-center text-md font-bold drop-shadow-lg">
-              <i class="fa-solid fa-rotate"></i>
-            </a>
-          </div>
+        <!--Bottom Buttons-->
+        <div class="flex items-center justify-center md:flex-row">
+          <a class="updateBtn basicButton buttonGray">
+              <i class="fa-solid fa-plus"></i>
+          </a>
+          <a href="#" class="reset basicButton buttonRed">
+            <i class="fa-solid fa-rotate"></i>
+          </a>
+        </div>
     </section>
     <script type="module" src="./resources/js/addchar.js"></script>
     <script type="module" src="./resources/js/design.js"></script>
