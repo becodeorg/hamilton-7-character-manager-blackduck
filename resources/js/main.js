@@ -17,22 +17,24 @@ async function getChars() {
             console.log(el);
             const card = document.createElement('div');
             console.log(card);
-            card.setAttribute('class', 'card');
+            card.className =
+                'card flex flex-col justify-between bg-black/30 w-60 h-80 rounded-xl';
             const title = document.createTextNode(el.name);
             console.log(title);
             const desc = document.createTextNode(el.description);
             const p = document.createElement('p');
-            p.setAttribute('class', 'description');
+            p.className = 'description hidden';
             p.appendChild(desc);
 
             const short = document.createTextNode(el.shortDescription);
             const shortDsec = document.createElement('p');
-            shortDsec.setAttribute('class', 'shortDescription');
+            shortDsec.className = 'shortDescription text-justify text-xs';
             shortDsec.appendChild(short);
 
             const image = document.createElement('img');
             image.setAttribute('src', makeImageSource(el.image));
-            image.setAttribute('class', 'profilePicture');
+            image.className =
+                'profilePicture rounded-full grayscale w-2/4 self-center';
 
             const h2 = document.createElement('h2');
             h2.setAttribute('class', 'name');

@@ -32,6 +32,8 @@ async function getSingleChar(characterId) {
         const image = document.createElement('img');
         image.setAttribute('src', makeImageSource(response.data.image));
 
+        updateBtn.setAttribute('href', `addchar.html?id=${characterId}`);
+
         profilePicture.appendChild(image);
         charName.appendChild(cname);
         shortDesc.appendChild(short);
