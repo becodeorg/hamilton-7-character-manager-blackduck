@@ -4,55 +4,43 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <link rel="stylesheet" href="style.css">
+  <!--CSS-->
+  <link rel="stylesheet" href="resources/css/style.css">
+  <!--Font Family Black Ops One-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+  <!--Fontawesome-->
+  <script src="https://kit.fontawesome.com/1c776a677b.js" crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Character Manager</title>
 </head>
 
 <body>
   <!--
-    <div id="app"></div>
-    -->
-  <h1>Character Manager</h1>
-  <div class="seperation__bar"></div>
-
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <!--CSS-->
-    <link rel="stylesheet" href="resources/css/style.css">
-    <!--Font Family Permanent Marker-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Character Manager</title>
-  </head>
-
-  <body class="bg-gradient-to-r from-violet-400 via-pink-400 to-red-400 flex-col items-start">
-    <!--
     <div id=" app">
   </div>
-  -->
-    <header class="w-full">
-      <div class=" flex items-center justify-around">
-        <h1 class=" font-permanent">Character Manager</h1>
-        <input type="text" placeholder="Search character" name="search" class="p-1 bg-white rounded-md w-52 italic	">
+-->
+    <header>
+      <div class="headerContainer">
+        <h1>
+          <a href="index.html">
+          Character Manager
+          </a>
+        </h1>
+        <input type="text" placeholder="Search character" name="search" class="p-1 bg-white rounded-md w-52 italic">
       </div>
-      <div class="seperation__bar h-1 bg-white m-auto"></div>
+      <div class="seperation__bar"></div>
     </header>
-    <section class="container"></section>
+    <section class="container grid gap-12 grid-cols-1 justify-items-center md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"></section>
 
-    <div class="flex items-center justify-center md:flex-row">
-      
-      <a href="/addchar.html" class="reset m-4 w-10 h-10 pt-2 bg-gray-300/50 rounded-full text-rose-900 text-center text-md font-bold drop-shadow-lg">
-        <i class="fa-solid fa-rotate"></i>
-      </a>
-    </div>
-
+    <a class="btnAdd" href="addchar.html?id=newchar" title="Button to add a character">
+      <i class="fa-solid fa-plus"></i>
+    </a>
+<!--
     <script type="module" src="./resources/js/main.js"></script>
+-->
+    <script type="module" src="./resources/js/design.js"></script>
   </body>
 
 </html>

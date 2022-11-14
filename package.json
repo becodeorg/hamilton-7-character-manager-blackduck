@@ -12,7 +12,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "compile": "sass --watch --no-source-map resources/sass/styles.scss /resources/css/styles.css",
-    "build-tailwind": "tailwindcss build style.css -o ./resources/css/style.css"
+    "build-tailwind": "tailwindcss build style.css -o ./resources/css/style.css --watch"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

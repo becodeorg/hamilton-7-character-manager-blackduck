@@ -21,12 +21,12 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: white;
   text-decoration: inherit;
 }
 
 a:hover {
-  color: #535bf2;
+  color: rgba(188, 202, 201, 0.521);
 }
 
 body {
@@ -64,7 +64,8 @@ h1 {
 }
 
 .card {
-  padding: 2em;
+  /*changed from 2em to 1*/
+  padding: 1em;
 }
 
 .read-the-docs {
@@ -90,6 +91,30 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+input, textarea{
+  margin-bottom:10px;
+  border-radius: 0.5rem;
+  background-color: rgba(188, 202, 201, 0.521);
+  padding: 5px; 
+}
+
+.btnAdd {
+  @apply w-20 h-20 bg-slate-500 hover:bg-white/50 rounded-full mt-8 pt-5 text-white hover:text-slate-500 text-center text-4xl font-bold m-auto drop-shadow-lg
+}
+.singleCard{
+  @apply w-full min-h-fit lg:w-4/5 p-6 bg-black/30 rounded-3xl;
+}
+.basicButton{
+  @apply m-4 w-10 h-10 pt-2 rounded-full text-center font-bold drop-shadow-lg ;
+}
+.buttonGray{
+  @apply bg-gray-500 hover:bg-white text-white hover:text-gray-500;
+}
+
+.buttonRed{
+  @apply bg-gray-300/50 hover:bg-rose-900  text-rose-900 hover:text-gray-300;
 }
 
 @media (prefers-color-scheme: light) {
