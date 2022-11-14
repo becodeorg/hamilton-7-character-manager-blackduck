@@ -42,8 +42,8 @@ async function getChars() {
             console.log(h2);
 
             const btnMore = document.createElement('a');
-            btnMore.setAttribute('class', 'btnMore');
-            // TODO create url with id as parameter
+            btnMore.className =
+                'btnMore cursor-pointer	w-max self-end text-xs p-2 bg-slate-500 rounded-lg italic hover:bg-white hover:text-slate-500';
             btnMore.setAttribute('href', `singlechar.html?id=${el.id}`);
             const btnMoreText = document.createTextNode('See Character');
             btnMore.appendChild(btnMoreText);
