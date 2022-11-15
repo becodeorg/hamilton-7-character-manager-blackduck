@@ -10,27 +10,31 @@ const fileUpload = document.querySelector('.uploadImage');
 const nameBox = document.querySelector('.charname');
 const shortBox = document.querySelector('.short');
 const longBox = document.querySelector('.description');
-console.log(longBox);
+// console.log(longBox);
 // const resetBtn = document.querySelector('.reset');
 const submit = document.querySelector('.add');
-console.log(submit);
+// console.log(submit);
 const character = new Character();
 const charId = url.searchParams.get('id');
-console.log(charId);
-console.log(character);
+// console.log(charId);
+// console.log(character);
 
 async function getEditChar(characterId) {
     let response;
     try {
         // console.log(character.name);
-        console.log('trying ....');
+        // console.log('trying ....');
         response = await axios.get(`${apiRoot}/characters/${characterId}`);
-        console.log(response);
+        // console.log(response);
         character.name = response.data.name;
         character.description = response.data.description;
         character.shortDescription = response.data.shortDescription;
         character.id = response.data.id;
         character.image = response.data.image;
+        if (!character.image) {
+            // console.log(pictureBox.style.visibility);
+            pictureBox.style.visibility = 'hidden';
+        }
 
         nameBox.value = character.name;
         shortBox.value = character.shortDescription;
@@ -49,20 +53,25 @@ async function getEditChar(characterId) {
                     .replace('data:', '')
                     .replace(/^.+,/, '');
 
-                console.log(base64String);
+                // console.log(base64String);
                 newImage = base64String;
+                pictureBox.style.visibility = 'visible';
+                pictureBox.setAttribute('src', makeImageSource(newImage));
             };
             reader.readAsDataURL(file);
         });
 
-        pictureBox.setAttribute('src', makeImageSource(character.image));
         submit.addEventListener('click', async () => {
-            console.log(nameBox.value);
+            // console.log(nameBox.value);
             character.name = nameBox.value;
             character.description = longBox.value;
             character.shortDescription = shortBox.value;
             if (newImage) {
                 character.image = newImage;
+                pictureBox.setAttribute(
+                    'src',
+                    makeImageSource(character.image)
+                );
             }
             // character.image = convert to base64;
             await axios.put(`${apiRoot}/characters/${character.id}`, character);
@@ -77,6 +86,8 @@ async function getEditChar(characterId) {
 if (charId) {
     getEditChar(charId);
 } else {
+    // console.log(pictureBox.style.visibility);
+    pictureBox.style.visibility = 'hidden';
     try {
         fileUpload.addEventListener('change', (e) => {
             // Get a reference to the file
@@ -90,19 +101,22 @@ if (charId) {
                     .replace('data:', '')
                     .replace(/^.+,/, '');
 
-                console.log(base64String);
+                // console.log(base64String);
                 newImage = base64String;
+                pictureBox.setAttribute('src', makeImageSource(newImage));
+                pictureBox.style.visibility = 'visible';
+                // console.log('present');
             };
             reader.readAsDataURL(file);
         });
 
         submit.addEventListener('click', async () => {
-            console.log(nameBox.value);
+            // console.log(nameBox.value);
             character.name = nameBox.value;
             character.description = longBox.value;
             character.shortDescription = shortBox.value;
             character.image = newImage;
-            console.log(newImage);
+            // console.log(newImage);
             await axios.post(`${apiRoot}/characters`, character);
             window.location.href = '/';
             // character.image = convert to base64;
