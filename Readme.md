@@ -19,5 +19,5 @@ Consolidation challange after learning Javascript
 HTML, CSS,JS, Vite, Tailwind
 
 ## Deployment Method
-Deployed to Netlify
+Deployed to Netlify code to be found on the dev branch
 
