@@ -874,7 +874,6 @@ button:focus-visible {
 
 input, textarea{
   width: 100%;
-  height: 20%;
   border-radius: 0.5rem;
   background-color: rgba(188, 202, 201, 0.521);
 }
@@ -971,14 +970,6 @@ input, textarea{
   button {
     background-color: #242424;
   }
-}
-
-.placeholder\:font-blackOps::-moz-placeholder {
-  font-family: Black Ops One;
-}
-
-.placeholder\:font-blackOps::placeholder {
-  font-family: Black Ops One;
 }
 
 .placeholder\:text-gray-500::-moz-placeholder {
