@@ -1,15 +1,16 @@
 /* eslint-disable no-restricted-syntax */
+/* eslint-disable no-console */
 import axios from 'axios';
 import { makeImageSource, error } from './helpers';
 
-// const url = new URL(document.location.href);
-const container = document.querySelector('.container');
-// console.log(container);
 const apiRoot = 'https://character-database.becode.xyz';
+const container = document.querySelector('.container');
 // Loading Spinner
 const loader = document.querySelector('.loading');
 const btnAdd = document.querySelector('.btnAdd');
 btnAdd.style.display = 'none';
+
+console.log(loader);
 
 async function getChars() {
     // console.log('now async ....');
@@ -24,7 +25,7 @@ async function getChars() {
             loader.style.display = 'none';
             btnAdd.style.display = 'block';
         }
-
+        // Cards Display
         for (const el of response.data) {
             // console.log(el);
             const card = document.createElement('div');
@@ -76,9 +77,4 @@ async function getChars() {
     }
 }
 
-// console.log('getting chars...');
-
 getChars();
-
-// convert to object character
-// console.log('END');
