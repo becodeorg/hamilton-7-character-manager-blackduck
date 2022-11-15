@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <!--CSS-->
+  <link rel="stylesheet" href="resources/css/style.css">
+  <!--Font Family Black Ops One-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+  <!--Fontawesome-->
+  <script src="https://kit.fontawesome.com/1c776a677b.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Character Manager</title>
+</head>
+<body>
+  <header>
+    <div class="headerContainer">
+      <h1>
+        <a href="index.html">
+        Character Manager
+        </a>
+      </h1>
+    </div>
+    <div class="seperation__bar"></div>
+  </header>
+  <form action="" class="charForm singleCard flex flex-col items-center gap-3">
+      <div class="pictureContainer rounded-full relative w-24 h-24 border border-gray-300 border-solid text-center pt-9">
+        Preview
+        <img class="profilePicture absolute top-0 rounded-full w-24 h-24" src="" alt="Picture">
+      </div>
+      <input type="file" class="uploadImage">
+      <input type="text" name="characterName" placeholder="Name" class="charname p-2 placeholder:text-gray-500 font-blackOps" required>
+      <input type="text" name="description" placeholder="Short description" class="short p-2 placeholder:text-gray-500" required>
+      <textarea name="biographie" placeholder="Insert description" cols="30" rows="10" class="description p-2 placeholder:text-gray-500" required></textarea>
+      <div class="flex items-center justify-center md:flex-row">
+        <a href="#" type="submit" class="add updateBtn basicButton buttonGray"><i class="fa-solid fa-plus"></i></a>
+        <input type="reset" value="&#8634;" class="reset rounded-full w-10 h-10 text-center p-0 buttonRed text-3xl">
+      </div>
+  </form>
+  <script type="module" src="./resources/js/addchar.js"></script>
+  <script type="module" src="./resources/js/form.js"></script>
+  <script type="module" src="./resources/js/design.js"></script>
+</body>
+</html>
