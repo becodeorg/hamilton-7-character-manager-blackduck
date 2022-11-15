@@ -14,10 +14,8 @@ const description = document.querySelector('.description');
 const updateBtn = document.querySelector('.updateBtn');
 const deleteBtn = document.querySelector('.deleteBtn');
 
-const delDiv = document.querySelector('.deleted');
-delDiv.style.display = 'none';
-
 const charId = url.searchParams.get('id');
+
 // searchParams gets the url parameter with the specified key(id)
 
 // Loading Spinner
