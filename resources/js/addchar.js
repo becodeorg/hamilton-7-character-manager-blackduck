@@ -34,7 +34,8 @@ async function getEditChar(characterId) {
         if (!character.image) {
             // console.log(pictureBox.style.visibility);
             pictureBox.style.visibility = 'hidden';
-        } else {
+        }
+        else{
             pictureBox.setAttribute('src', makeImageSource(character.image));
         }
 
@@ -80,7 +81,7 @@ async function getEditChar(characterId) {
     }
 }
 
-// Theres a reset button build into html forms
+// // Theres a reset button build into html forms
 if (charId) {
     getEditChar(charId);
 } else {
