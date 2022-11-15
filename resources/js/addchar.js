@@ -18,6 +18,7 @@ const character = new Character();
 const charId = url.searchParams.get('id');
 // console.log(charId);
 // console.log(character);
+const pictureContainer = document.querySelector('.pictureContainer');
 
 async function getEditChar(characterId) {
     let response;
@@ -60,6 +61,7 @@ async function getEditChar(characterId) {
                 newImage = base64String;
                 pictureBox.style.visibility = 'visible';
                 pictureBox.setAttribute('src', makeImageSource(newImage));
+                pictureContainer.style.border = 'none';
             };
             reader.readAsDataURL(file);
         });
@@ -105,6 +107,7 @@ if (charId) {
                 pictureBox.setAttribute('src', makeImageSource(newImage));
                 pictureBox.style.visibility = 'visible';
                 // console.log('present');
+                pictureContainer.style.border = 'none';
             };
             reader.readAsDataURL(file);
         });

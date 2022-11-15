@@ -6,6 +6,10 @@ import { makeImageSource, error } from './helpers';
 const container = document.querySelector('.container');
 // console.log(container);
 const apiRoot = 'https://character-database.becode.xyz';
+// Loading Spinner
+const loader = document.querySelector('.loading');
+const btnAdd = document.querySelector('.btnAdd');
+btnAdd.style.display = 'none';
 
 async function getChars() {
     // console.log('now async ....');
@@ -13,6 +17,14 @@ async function getChars() {
     try {
         // console.log('trying ....');
         response = await axios.get(`${apiRoot}/characters`);
+        // Loading Spinner
+        if (response === true) {
+            loader.style.display = 'block';
+        } else {
+            loader.style.display = 'none';
+            btnAdd.style.display = 'block';
+        }
+
         for (const el of response.data) {
             // console.log(el);
             const card = document.createElement('div');

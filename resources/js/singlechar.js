@@ -13,9 +13,17 @@ const shortDesc = document.querySelector('.shortDescription');
 const description = document.querySelector('.description');
 const updateBtn = document.querySelector('.updateBtn');
 const deleteBtn = document.querySelector('.deleteBtn');
+
+const delDiv = document.querySelector('.deleted');
+delDiv.style.display = 'none';
+
 const charId = url.searchParams.get('id');
 // searchParams gets the url parameter with the specified key(id)
 
+// Loading Spinner
+const loader = document.querySelector('.loading');
+const singleCard = document.querySelector('.singleCard');
+singleCard.style.display = 'none';
 // Grab components
 
 async function getSingleChar(characterId) {
@@ -24,6 +32,13 @@ async function getSingleChar(characterId) {
         // console.log('trying ....');
         response = await axios.get(`${apiRoot}/characters/${characterId}`);
         // console.log(response);
+        // Loading Spinner
+        if (response === true) {
+            loader.style.display = 'block';
+        } else {
+            loader.style.display = 'none';
+            singleCard.style.display = 'block';
+        }
 
         const cname = document.createTextNode(response.data.name);
         const desc = document.createTextNode(response.data.description);
@@ -40,9 +55,10 @@ async function getSingleChar(characterId) {
         shortDesc.appendChild(short);
         description.appendChild(desc);
         deleteBtn.addEventListener('click', () => {
-            axios
-                .delete(`${apiRoot}/characters/${characterId}`)
-                .then(() => alert('deleted'));
+            axios.delete(`${apiRoot}/characters/${characterId}`).then(() => {
+                singleCard.style.display = 'none';
+                delDiv.style.display = 'block';
+            });
         });
     } catch {
         error('Nothing here');
