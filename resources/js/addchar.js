@@ -60,6 +60,7 @@ async function getEditChar(characterId) {
                 newImage = base64String;
                 pictureBox.style.visibility = 'visible';
                 pictureBox.setAttribute('src', makeImageSource(newImage));
+                pictureContainer.style.border = 'none';
             };
             reader.readAsDataURL(file);
         });
