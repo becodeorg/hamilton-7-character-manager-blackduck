@@ -26,7 +26,10 @@
     <div class="seperation__bar"></div>
   </header>
   <form action="" class="charForm singleCard flex flex-col items-center gap-3">
-      <img class="profilePicture rounded-full w-24 h-24 border border-gray-300 border-solid" src="" alt="Picture">
+      <div class="pictureContainer rounded-full relative w-24 h-24 border border-gray-300 border-solid text-center pt-9">
+        Preview
+        <img class="profilePicture absolute top-0 rounded-full w-24 h-24" src="" alt="Picture">
+      </div>
       <input type="file" class="uploadImage">
       <input type="text" name="characterName" placeholder="Name" class="charname p-2 placeholder:text-gray-500 font-blackOps" required>
       <input type="text" name="description" placeholder="Short description" class="short p-2 placeholder:text-gray-500" required>
