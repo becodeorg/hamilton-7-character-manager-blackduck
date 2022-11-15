@@ -73,7 +73,7 @@ async function getEditChar(characterId) {
     }
 }
 
-// // Theres a reset button build into html forms
+// Theres a reset button build into html forms
 if (charId) {
     getEditChar(charId);
 } else {
