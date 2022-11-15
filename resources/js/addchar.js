@@ -34,6 +34,8 @@ async function getEditChar(characterId) {
         if (!character.image) {
             // console.log(pictureBox.style.visibility);
             pictureBox.style.visibility = 'hidden';
+        } else {
+            pictureBox.setAttribute('src', makeImageSource(character.image));
         }
 
         nameBox.value = character.name;
@@ -68,10 +70,6 @@ async function getEditChar(characterId) {
             character.shortDescription = shortBox.value;
             if (newImage) {
                 character.image = newImage;
-                pictureBox.setAttribute(
-                    'src',
-                    makeImageSource(character.image)
-                );
             }
             // character.image = convert to base64;
             await axios.put(`${apiRoot}/characters/${character.id}`, character);
