@@ -5,7 +5,7 @@ import { makeImageSource, error } from './helpers';
 const apiRoot = 'https://character-database.becode.xyz';
 const url = new URL(document.location.href);
 // returns URL object of the loaded page
-console.log(url);
+// console.log(url);
 // const pageTitle = document.querySelector('title');
 const profilePicture = document.querySelector('.profilePicture');
 const charName = document.querySelector('.name');
@@ -21,9 +21,9 @@ const charId = url.searchParams.get('id');
 async function getSingleChar(characterId) {
     let response;
     try {
-        console.log('trying ....');
+        // console.log('trying ....');
         response = await axios.get(`${apiRoot}/characters/${characterId}`);
-        console.log(response);
+        // console.log(response);
 
         const cname = document.createTextNode(response.data.name);
         const desc = document.createTextNode(response.data.description);

@@ -4,23 +4,23 @@ import { makeImageSource, error } from './helpers';
 
 // const url = new URL(document.location.href);
 const container = document.querySelector('.container');
-console.log(container);
+// console.log(container);
 const apiRoot = 'https://character-database.becode.xyz';
 
 async function getChars() {
-    console.log('now async ....');
+    // console.log('now async ....');
     let response;
     try {
-        console.log('trying ....');
+        // console.log('trying ....');
         response = await axios.get(`${apiRoot}/characters`);
         for (const el of response.data) {
-            console.log(el);
+            // console.log(el);
             const card = document.createElement('div');
-            console.log(card);
+            // console.log(card);
             card.className =
                 'card flex flex-col justify-between bg-black/30 w-60 h-80 rounded-xl text-white';
             const title = document.createTextNode(el.name);
-            console.log(title);
+            // console.log(title);
             const desc = document.createTextNode(el.description);
             const p = document.createElement('p');
             p.className = 'description hidden';
@@ -39,8 +39,9 @@ async function getChars() {
 
             const h2 = document.createElement('h2');
             h2.appendChild(title);
-            console.log(h2);
-            h2.className = 'name text-center font-blackOps text-sm left text-white';
+            // console.log(h2);
+            h2.className =
+                'name text-center font-blackOps text-sm left text-white';
 
             const btnMore = document.createElement('a');
             btnMore.className =
@@ -58,14 +59,14 @@ async function getChars() {
             container.appendChild(card);
         }
     } catch (err) {
-        console.log('catch ....');
+        // console.log('catch ....');
         error(err);
     }
 }
 
-console.log('getting chars...');
+// console.log('getting chars...');
 
 getChars();
 
 // convert to object character
-console.log('END');
+// console.log('END');

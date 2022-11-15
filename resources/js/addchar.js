@@ -10,22 +10,22 @@ const fileUpload = document.querySelector('.uploadImage');
 const nameBox = document.querySelector('.charname');
 const shortBox = document.querySelector('.short');
 const longBox = document.querySelector('.description');
-console.log(longBox);
+// console.log(longBox);
 // const resetBtn = document.querySelector('.reset');
 const submit = document.querySelector('.add');
-console.log(submit);
+// console.log(submit);
 const character = new Character();
 const charId = url.searchParams.get('id');
-console.log(charId);
-console.log(character);
+// console.log(charId);
+// console.log(character);
 
 async function getEditChar(characterId) {
     let response;
     try {
         // console.log(character.name);
-        console.log('trying ....');
+        // console.log('trying ....');
         response = await axios.get(`${apiRoot}/characters/${characterId}`);
-        console.log(response);
+        // console.log(response);
         character.name = response.data.name;
         character.description = response.data.description;
         character.shortDescription = response.data.shortDescription;
@@ -49,7 +49,7 @@ async function getEditChar(characterId) {
                     .replace('data:', '')
                     .replace(/^.+,/, '');
 
-                console.log(base64String);
+                // console.log(base64String);
                 newImage = base64String;
             };
             reader.readAsDataURL(file);
@@ -57,7 +57,7 @@ async function getEditChar(characterId) {
 
         pictureBox.setAttribute('src', makeImageSource(character.image));
         submit.addEventListener('click', async () => {
-            console.log(nameBox.value);
+            // console.log(nameBox.value);
             character.name = nameBox.value;
             character.description = longBox.value;
             character.shortDescription = shortBox.value;
@@ -90,19 +90,19 @@ if (charId) {
                     .replace('data:', '')
                     .replace(/^.+,/, '');
 
-                console.log(base64String);
+                // console.log(base64String);
                 newImage = base64String;
             };
             reader.readAsDataURL(file);
         });
 
         submit.addEventListener('click', async () => {
-            console.log(nameBox.value);
+            // console.log(nameBox.value);
             character.name = nameBox.value;
             character.description = longBox.value;
             character.shortDescription = shortBox.value;
             character.image = newImage;
-            console.log(newImage);
+            // console.log(newImage);
             await axios.post(`${apiRoot}/characters`, character);
             window.location.href = '/';
             // character.image = convert to base64;
