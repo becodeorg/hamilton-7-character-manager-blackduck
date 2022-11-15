@@ -13,6 +13,10 @@ const shortDesc = document.querySelector('.shortDescription');
 const description = document.querySelector('.description');
 const updateBtn = document.querySelector('.updateBtn');
 const deleteBtn = document.querySelector('.deleteBtn');
+
+const delDiv = document.querySelector('.deleted');
+delDiv.style.display = 'none';
+
 const charId = url.searchParams.get('id');
 // searchParams gets the url parameter with the specified key(id)
 
@@ -51,9 +55,10 @@ async function getSingleChar(characterId) {
         shortDesc.appendChild(short);
         description.appendChild(desc);
         deleteBtn.addEventListener('click', () => {
-            axios
-                .delete(`${apiRoot}/characters/${characterId}`)
-                .then(() => alert('deleted'));
+            axios.delete(`${apiRoot}/characters/${characterId}`).then(() => {
+                singleCard.style.display = 'none';
+                delDiv.style.display = 'block';
+            });
         });
     } catch {
         error('Nothing here');
