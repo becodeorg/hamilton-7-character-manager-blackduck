@@ -31,6 +31,12 @@ async function getEditChar(characterId) {
         character.shortDescription = response.data.shortDescription;
         character.id = response.data.id;
         character.image = response.data.image;
+        if (!character.image) {
+            // console.log(pictureBox.style.visibility);
+            pictureBox.style.visibility = 'hidden';
+        } else {
+            pictureBox.setAttribute('src', makeImageSource(character.image));
+        }
 
         nameBox.value = character.name;
         shortBox.value = character.shortDescription;
@@ -51,11 +57,12 @@ async function getEditChar(characterId) {
 
                 // console.log(base64String);
                 newImage = base64String;
+                pictureBox.style.visibility = 'visible';
+                pictureBox.setAttribute('src', makeImageSource(newImage));
             };
             reader.readAsDataURL(file);
         });
 
-        pictureBox.setAttribute('src', makeImageSource(character.image));
         submit.addEventListener('click', async () => {
             // console.log(nameBox.value);
             character.name = nameBox.value;
@@ -77,6 +84,8 @@ async function getEditChar(characterId) {
 if (charId) {
     getEditChar(charId);
 } else {
+    // console.log(pictureBox.style.visibility);
+    pictureBox.style.visibility = 'hidden';
     try {
         fileUpload.addEventListener('change', (e) => {
             // Get a reference to the file
@@ -92,6 +101,9 @@ if (charId) {
 
                 // console.log(base64String);
                 newImage = base64String;
+                pictureBox.setAttribute('src', makeImageSource(newImage));
+                pictureBox.style.visibility = 'visible';
+                // console.log('present');
             };
             reader.readAsDataURL(file);
         });
